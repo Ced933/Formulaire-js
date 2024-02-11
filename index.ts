@@ -1,3 +1,12 @@
+
+// import { User } from "./interface";
+interface User {
+    pseudo: string,
+    email: number | string,
+    password : number | string,
+    confirmPass : boolean
+}
+
 const inputs = document.querySelectorAll("input[type='text'],input[type='password'] ")
 console.log(inputs);
 
@@ -118,7 +127,7 @@ form.addEventListener('submit', (e:any)=>{
     if(pseudo && email && password&& confirmPass){
         
 
-        let data = 
+        let data: User = 
             {
                 pseudo:pseudo,
                 email: email,
